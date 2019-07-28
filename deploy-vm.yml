@@ -1,18 +1,18 @@
 # create a new VM from a template
 
-- name: VM from template
+- name: new VM from template
   hosts: localhost
   gather_facts: false
   connection: local
   vars:
-    vcenter_hostname: vcenter-hostname
-    vcenter_user: administrator@vsphere.local
+    vcenter_hostname: hostname
+    vcenter_user: administrator@
     vcenter_pass: password
     esxhost: esx_host_ip
-    datastore: datastore01
-    vmtemplate: VM01
-    name: "newvm"
-    notes: Ansible Test
+    datastore: datastore1
+    vmtemplate: VM1
+    name: "new_vm"
+    notes: Ansible_Test
     dumpfacts: False
   tasks:
     - name: Create VM from template
